@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>DRINKS_HASH_CLASS</title>
+ 	<script>
+ 		"use strict";
+
+		class HashStorageFunc {
+			constructor() {
+				this.drinks = {};
+			}
+
+			addValue(key,value) {
+				this.drinks[key] = value;
+			}
+
+			getValue(key) {
+				return this.drinks[key];
+			}
+
+			deleteValue(key) {
+				return delete this.drinks[key];
+			}
+
+			getKeys() {
+				return Object.keys(this.drinks);
+			}
+		}
+
+		function addButtonClick() {
+			let drinkName = prompt("Введите название напитка:");
+			let drinkValue = {};
+			drinkValue.isAlcohol = confirm("Напиток алгогольный?") ? "да" : "нет";
+			drinkValue.recipe = prompt("Введите рецепт напитка:");
+			drinkStorage.addValue(drinkName, drinkValue);
+		}
+
+		function getButtonClick() {
+			let drinkName = prompt("Введите название напитка:");
+			let value = drinkStorage.getValue(drinkName);
+			if (!value) {
+				console.log("данный напиток в хранилище не найден");
+			} else {
+				console.log("напиток " + drinkName);
+				console.log("алкогольный: " + value.isAlcohol);
+				console.log("рецепт приготовления:");
+				console.log(value.recipe);
+			}
+		}
+
+		function deleteButtonClick() {
+			let drinkName = prompt("Введите название напитка:");
+			if(!(drinkName in drinkStorage.drinks)) {
+				console.log("данный напиток в хранилище не найден");
+			} else {
+				drinkStorage.deleteValue(drinkName);
+				console.log("напиток " + drinkName + " удален из хранилища.");
+			}
+		}
+
+		function getKeysButtonClick() {
+			let drinks = drinkStorage.getKeys();
+			if(!drinks) {
+				console.log("В хранилище отсутствует информация о напитках.");
+				return;
+			}
+			console.log("В хранилище имеются информация о следующих напитках:");
+			let counter = 1;
+			for(let i in drinks) {
+				console.log(counter++ + " " + drinks[i]);
+			}
+		}
+
+		var drinkStorage = new HashStorageFunc();
+		drinkStorage.addValue("Маргарита", {isAlcohol: "да", recipe: "продукт, продукт... смешать..."});
+		drinkStorage.addValue("Капучино", {isAlcohol: "нет", recipe: "взбить сливки, добавить эспрессо, посыпать корицей"});
+ 	</script>
+ </head>
+ <body style="margin: 20px auto;">
+ 	<h2 style="text-align: center;">Хранилище рецептов напитков</h2>
+ 	<section style="display: flex; flex-direction: column; align-items: center;}">
+ 		<div style="padding: 5px;">
+ 			<input type="button" class="add-value" value="ввод информации о напитке" id="add-btn" onclick="addButtonClick()" />
+ 		</div>
+ 		<div style="padding: 5px;">
+ 			<input type="button" class="get-value" value="получение информации о напитке" id="get-btn" onclick="getButtonClick()" />
+ 		</div>
+ 		<div style="padding: 5px;">
+ 			<input type="button" class="delete-value" value="удаление информации о напитке" id="get-btn" onclick="deleteButtonClick()" />
+ 		</div>
+ 		<div style="padding: 5px;">
+ 			<input type="button" class="get-keys" value="перечень всех напитков" id="get-btn" onclick="getKeysButtonClick()" />
+ 		</div>
+ 	</section>
+ </body>
+ </html>
+
+ 
