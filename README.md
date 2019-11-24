@@ -13,7 +13,7 @@ N.13 Домашнее задание DRINKS_HASH_FUNC
 
 N.14 Домашнее задание DRINKS_HASH_CLASS +
 
-N.17 Домашнее задание VOWELS_ARR
+N.17 Домашнее задание VOWELS_ARR  +
 
 N.20 Домашнее задание ROOTS
 
