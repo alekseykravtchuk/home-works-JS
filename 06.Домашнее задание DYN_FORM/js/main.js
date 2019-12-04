@@ -72,8 +72,9 @@
           td.appendChild(select);
           break;
         case "radio":
-          input.setAttribute("type", "radio");
           for(let variant of element.variants) {
+            input = document.createElement("input");
+            input.setAttribute("type", "radio");
             input.setAttribute("name", element.name);
             input.setAttribute("value", variant.value);
             let span = document.createElement("span");
@@ -104,7 +105,6 @@
           input.setAttribute("value", value.substring(0, value.length - 1))
           td.appendChild(input);
       }
-
       row.appendChild(td);
       table.appendChild(row);
     });
