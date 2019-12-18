@@ -61,7 +61,7 @@
             }
             
             container.addEventListener('mouseup', mouseUpAction, false);
-            document.body.addEventListener('mouseup', mouseUpAction, false);
+            window.addEventListener('mouseup', mouseUpAction, false);
             
             function mouseUpAction() {
                 container.removeEventListener('mousemove', mouseMoveAction);
