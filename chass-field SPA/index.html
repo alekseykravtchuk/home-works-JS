@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chess</title>
+	<style type="text/css">
+		table{
+			border-spacing: 0;
+		}
+		td{
+			width: 50px;
+			height: 50px;
+			border: 1px solid;
+		}
+		.black {
+			background: black;
+		}
+		.white {
+			background: white;
+		}
+	</style>
+</head>
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+	let fieldSize = 8;
+
+	function drawField() {
+		let container = document.getElementById('container');
+		container.innerHTML = '';
+		let table = document.createElement('table');
+		for(let i = 0; i < fieldSize; i++) {
+			let tr = document.createElement('tr');
+			for(let j = 0; j < fieldSize; j++) {
+				let td = document.createElement('td');
+				tr.appendChild(td);
+				switch (window.location.hash) {
+					case '#1': 
+						if((i  % 2 == 0 && j % 2 == 1) || (i % 2 == 1 && j % 2 == 0)) {
+							td.className = 'black';
+						}
+						break;
+					case '#0': 
+						if((i % 2 == 0 && j % 2 == 0) || (i % 2 == 1 && j % 2 == 1)) {
+							td.className = 'black';
+						}
+				}
+			}
+			table.appendChild(tr);
+		}
+
+		container.appendChild(table);
+		}
+
+		window.location.hash = 0;
+		drawField();
+		document.body.addEventListener('click', () => {
+			
+			if(window.location.hash == '#1') window.location.hash = 0;
+			else window.location.hash = 1;
+			drawField();
+	});
+</script>
+</body>
+</html>
