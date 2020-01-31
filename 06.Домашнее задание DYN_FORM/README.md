@@ -2,7 +2,8 @@
 Вызвать эту функцию дважды с указанными ниже массивами, чтобы она построила на веб-странице две формы по указанным ниже образцам. Точном соответствия внешнего вида форм образцам добиваться не обязательно.
 В качестве скрипта, обрабатывающего данные форм (атрибут action тега form), можно указывать https://fe.it-academy.by/TestForm.php
 
-<code> var formDef1=
+<code> 
+var formDef1=
 [
   {label:'Название сайта:',kind:'longtext',name:'sitename'},
   {label:'URL сайта:',kind:'longtext',name:'siteurl'},
@@ -17,6 +18,7 @@
   {label:'Опубликовать:',kind:'submit'},
 ];
 
+
 var formDef2=
 [
   {label:'Фамилия:',kind:'longtext',name:'lastname'},
@@ -25,3 +27,4 @@ var formDef2=
   {label:'Возраст:',kind:'number',name:'age'},
   {label:'Зарегистрироваться:',kind:'submit'},
 ];
+
