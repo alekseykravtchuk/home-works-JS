@@ -23,7 +23,7 @@ N.40 Домашнее задание CLOCK_CANVAS+
 
 N.43 Домашнее задание TENNIS_DOM+
 
-N.53 Домашнее задание DRINKS_LOC_STORAGE
+N.53 Домашнее задание DRINKS_LOC_STORAGE+
 
 N.57 Домашнее задание CLOCK_MVC+
 
