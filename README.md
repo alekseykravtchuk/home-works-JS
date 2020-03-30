@@ -15,7 +15,7 @@ N.23 Домашнее задание DYN_FORM +
 
 N.27 Домашнее задание VALID_FORM +
 
-N.30 Домашнее задание DRAGNDROP +
+[N.30 Домашнее задание DRAGNDROP +](https://alekseykravtchuk.github.io/home-works-JS/08.%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B5%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20DRAGNDROP/)
 
 N.33 Домашнее задание CLOCK_DOM+
 
@@ -26,11 +26,3 @@ N.43 Домашнее задание TENNIS_DOM+
 N.53 Домашнее задание DRINKS_LOC_STORAGE+
 
 N.57 Домашнее задание CLOCK_MVC+
-
-N.60 Домашнее задание DYN_FORM_AJAX
-
-N.63 Домашнее задание DRINKS_AJAX_STORAGE
-
-N.67 Домашнее задание ENCYCLO
-
-N.70 Домашнее задание VALID_FORM_AJAX
