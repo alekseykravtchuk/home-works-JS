@@ -1,3 +1,5 @@
+# [ANKETA TEST](https://alekseykravtchuk.github.io/home-works-JS/01.Домашнее%20задание%20ANKETA)
+
 Создать проект ANKETA. Спросить у пользователя:
 фамилию, имя, отчество РАЗДЕЛЬНО (оператором prompt)
 возраст в годах (оператором prompt)
