@@ -28,6 +28,10 @@ line += "Your gender: " + gender  + "\n";
 line += "You are retired: " + (isRetired ? "yes" : "no");
 
 console.log(line);
+document.body.append(document.createElement('p'));
+let paragraph = document.querySelector('p');
+paragraph.setAttribute('style', 'margin: 5em auto; width: 16em');
+paragraph.innerText = line;
 
 function inputLine(message, example) {
 	var line;
